@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benjamin Kuek Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav">
+      <a href="#home" class="logo">Benjamin Kuek</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link" onclick="closeMenu()">Home</a></li>
+        <li><a href="#projects" class="nav-link" onclick="closeMenu()">Projects</a></li>
+        <li><a href="#about" class="nav-link" onclick="closeMenu()">About Me</a></li>
+        <li><a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a></li>
+      </ul>
+      <button class="menu-btn" id="menu-btn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="home" class="home">
+      <div class="container home-content">
+        <div class="home-text">
+          <h1>Hi, I'm Benjamin Kuek</h1>
+          <p class="role">Multimedia Computing Student</p>
+          <p class="intro">Computer Science (Multimedia Computing) student at Universiti Malaysia Sarawak (UNIMAS). I like making simple apps for fun and learning new things.</p>
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <div class="photo">
+          <img src="profile.jpg" alt="Portrait photo of Benjamin Kuek wearing a maroon patterned shirt">
+        </div>
+      </div>
+    </section>
+
+    <div class="services">
+      <div class="container service-list">
+        <div class="service">
+          <h3>UI/UX Design</h3>
+          <p>Clear and simple app screens.</p>
+        </div>
+        <div class="service">
+          <h3>Web Development</h3>
+          <p>Websites with Laravel and Node.js.</p>
+        </div>
+        <div class="service">
+          <h3>Mobile &amp; IoT</h3>
+          <p>Android apps and sensor systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects">
+      <div class="container">
+        <div class="title">
+          <h2>My Projects</h2>
+          <p>Some of the projects I have worked on</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" aria-pressed="true" onclick="filterProjects('all', this)">All</button>
+          <button class="filter-btn" aria-pressed="false" onclick="filterProjects('design', this)">UI/UX</button>
+          <button class="filter-btn" aria-pressed="false" onclick="filterProjects('website', this)">Website</button>
+          <button class="filter-btn" aria-pressed="false" onclick="filterProjects('app', this)">App</button>
+          <button class="filter-btn" aria-pressed="false" onclick="filterProjects('iot', this)">IoT</button>
+        </div>
+
+        <div class="project-list">
+          <div class="card design">
+            <div class="card-body">
+              <span class="tag">UI/UX Design</span>
+              <h3>ART Sarawak App: Interactive Map</h3>
+              <p>A UI/UX design for a mobile app with an interactive map of the Kuching ART (Autonomous Rapid Transit) routes and stations.</p>
+              <p class="tools">UI/UX Design, Prototyping</p>
+            </div>
+          </div>
+
+          <div class="card website">
+            <div class="card-body">
+              <span class="tag">Laravel Website</span>
+              <h3>Chennai Restaurant Cafe Ordering System</h3>
+              <p>A website where customers can view the cafe menu and place food orders online.</p>
+              <p class="tools">Laravel, PHP</p>
+            </div>
+          </div>
+
+          <div class="card app">
+            <div class="card-body">
+              <span class="tag">App</span>
+              <h3>CGPA Calculator Android App</h3>
+              <p>An Android app that calculates a student's GPA and CGPA from their grades and credit hours.</p>
+              <p class="tools">Android Studio</p>
+            </div>
+          </div>
+
+          <div class="card app">
+            <div class="card-body">
+              <span class="tag">App</span>
+              <h3>Node.js Ordering System</h3>
+              <p>A fully functional online ordering system with a Node.js back end.</p>
+              <p class="tools">Node.js, JavaScript</p>
+            </div>
+          </div>
+
+          <div class="card iot">
+            <div class="card-body">
+              <span class="tag">IoT</span>
+              <h3>Sensor Weather Monitoring System</h3>
+              <p>An IoT system that uses sensors to collect weather data and show the readings.</p>
+              <p class="tools">IoT, Sensors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="grey">
+      <div class="container">
+        <div class="title">
+          <h2>About Me</h2>
+          <p>A little bit about who I am</p>
+        </div>
+
+        <p class="about-text">I am from Kuching, Sarawak. I finished my Diploma in Computer Science at Universiti Teknologi Malaysia (UTM) Kuala Lumpur and I am now studying Bachelor in Computer Science (Multimedia Computing) with Honours at UNIMAS. I like listening to music, watching movies and making simple apps for fun. I also enjoy teaching people and explaining things in a simpler way.</p>
+
+        <div class="about-boxes">
+          <div class="box">
+            <h3>Education</h3>
+            <div class="timeline">
+              <div class="item">
+                <h4>Universiti Malaysia Sarawak (UNIMAS)</h4>
+                <p>Bachelor in Computer Science (Multimedia Computing) with Honours</p>
+              </div>
+              <div class="item">
+                <h4>Universiti Teknologi Malaysia (UTM), Kuala Lumpur</h4>
+                <p>Diploma in Computer Science (Information Technology)</p>
+              </div>
+              <div class="item">
+                <h4>Swinburne University of Technology Sarawak Campus</h4>
+                <p>Foundation Studies (IT / Multimedia)</p>
+              </div>
+              <div class="item">
+                <h4>SMK St Joseph, Kuching</h4>
+                <p>Sijil Pelajaran Malaysia (SPM)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <h3>Skills</h3>
+            <h4>Programming</h4>
+            <div class="skills">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>Java</span>
+              <span>C</span><span>C++</span><span>C#</span><span>VB.NET</span><span>Python</span>
+            </div>
+            <h4>Multimedia</h4>
+            <div class="skills">
+              <span>Photoshop</span><span>Illustrator</span><span>After Effects</span>
+              <span>Dreamweaver</span><span>Sony Vegas Pro</span><span>Filmora</span>
+            </div>
+            <h4>Tools</h4>
+            <div class="skills">
+              <span>Visual Studio</span><span>Android Studio</span><span>Arduino IDE</span>
+              <span>GitHub</span><span>GitLab</span><span>Microsoft Office</span>
+            </div>
+            <h4>Languages</h4>
+            <div class="skills">
+              <span>English</span><span>Malay</span><span>Chinese</span><span>MUET Band 3.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="title">
+          <h2>Contact Me</h2>
+          <p>Feel free to contact me about internships, projects or anything else</p>
+        </div>
+
+        <div class="contact-boxes">
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <p><b>Location</b><br>Kuching, Sarawak, Malaysia</p>
+            <p><b>University</b><br>Universiti Malaysia Sarawak (UNIMAS)</p>
+
+            <div class="contact-buttons">
+              <a href="mailto:benjaminkuek@gmail.com" class="btn">Email</a>
+              <a href="https://my.linkedin.com/in/benjaminkuek" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+              <a href="https://github.com/benkzy2" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+
+          <!-- contact form (front-end only, checked by checkForm() in script.js) -->
+          <form class="box" onsubmit="return checkForm()">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+
+            <label for="email">Email</label>
+            <input type="text" id="email">
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5"></textarea>
+
+            <p id="form-message" role="status"></p>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Benjamin Kuek. Made with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
